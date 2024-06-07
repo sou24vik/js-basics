@@ -22,11 +22,15 @@ console.table([name,email,password,City]);
 
 // number => 2 to power 53
 // bigint
-// string => ""
+// string => " "
 // boolean => true/false
 // null => standalone value
 // undefined => 
 // symbol => unique
+   
+
+// array
+// function
 // object
 
 console.log(typeof undefined); // undefined
@@ -83,7 +87,7 @@ console.log(Math.floor(Math.random() * (max - min + 1))+min);
 
 console.log(Math.ceil(14.922242));
 
-// ............... Date ...................
+// ............... Dates ...................
 
 let newDate = new Date()
 
@@ -91,10 +95,10 @@ console.log(newDate);
 console.log(newDate.getMonth() + 1);
 console.log(newDate.getDay());
 
-`${newDate.getDay()} and the time `
+console.log(`${newDate.getDay()} and the time `);
 
 
-newDate.toLocaleString(' default',{
-    weekday:"long"
+// console.log(newDate.toLocaleString(' default',{
+//     weekday:"long",
 
-})
+// }))
