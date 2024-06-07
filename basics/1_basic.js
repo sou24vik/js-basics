@@ -61,8 +61,40 @@ console.log(undefined === 0);
 
 // ............. String .............
 
-let viewer = new string ("suvo");
+let viewer = "Raj";
 let age = 25;
 
 console.log(`viewer ${viewer} and his age ${age} years old`);
 
+const subscriber = new String('Aditi');
+
+const url = "https://souvik24.com/vik%20star";
+
+console.log(url.replace('%20','-'));
+
+// ................... Math ......................
+
+console.log((Math.random()*10));
+
+const min = 10
+const max = 20
+
+console.log(Math.floor(Math.random() * (max - min + 1))+min);
+
+console.log(Math.ceil(14.922242));
+
+// ............... Date ...................
+
+let newDate = new Date()
+
+console.log(newDate);
+console.log(newDate.getMonth() + 1);
+console.log(newDate.getDay());
+
+`${newDate.getDay()} and the time `
+
+
+newDate.toLocaleString(' default',{
+    weekday:"long"
+
+})
