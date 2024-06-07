@@ -56,4 +56,13 @@ console.log(score);
 console.log("02"> 1); //true
 
 console.log(null>=0);
-console.log(undefined === 0)
+console.log(undefined === 0);
+
+
+// ............. String .............
+
+let viewer = new string ("suvo");
+let age = 25;
+
+console.log(`viewer ${viewer} and his age ${age} years old`);
+
