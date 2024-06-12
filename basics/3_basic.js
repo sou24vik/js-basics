@@ -1,5 +1,6 @@
 // ............. Function ...............
 
+
 function sayMyName() {
     console.log("v");
     console.log("i");
@@ -34,3 +35,8 @@ function sayMyName() {
         age : 22
     
     })
+
+
+
+  //  .......... Scopes ..........
+
