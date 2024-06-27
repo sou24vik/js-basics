@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body>
+    <h2>Favourit Person</h2>
+<div>
+     <ul id="images">
+        <li><img width= "150px" id="virat" src="https://im.rediff.com/cricket/2023/jan/17kohli1.jpg?w=670&h=900" alt="virat"></li>
+        <li><img width="150px" id="shahrukh" src="https://m.media-amazon.com/images/M/MV5BZDk1ZmU0NGYtMzQ2Yi00N2NjLTkyNWEtZWE2NTU4NTJiZGUzXkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_FMjpg_UX1000_.jpg" alt=""></li>
+        <li><img width= "150px" id="uttam" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGH81PZx1IEZihNH6f2MAqkCRTGzn0a9CobA&s" alt=""></li>
+        <li><a href= "https://google.com" id="google">Google</a></li>
+     </ul>
+</div>
+</body>
+<script>
+    // const uttam = document.querySelector("#uttam")
+    // uttam.addEventListener('click', function(e) {
+    //     alert("Uttam Kumar")
+    // })
+
+    // document.getElementById('uttam').onclick = function () {
+    //     alert("Uttam Kumar")
+    // }
+
+    // document.getElementById('images').addEventListener('click', function(e) {
+    //     console.log("Clicked inside the ul");
+    // }, false)
+
+    // document.getElementById('shahrukh').addEventListener('click', function(e) {
+    //     console.log("Clickd on Shahrukh Khan");
+    //     e.stopPropagation();
+    // }, false) 
+
+    document.getElementById('google').addEventListener('click', function(e) {
+        e.preventDefault();
+    })
+
+    document.querySelector('#images').addEventListener('click', function(e) {
+        console.log(e.target);
+        if(e.target.tagName === 'IMG') {
+            console.log(e.target.parentNode);
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+            //removeIt.parentNode.removeChild(removeIt);
+        }
+    })
+</script>
+</html>

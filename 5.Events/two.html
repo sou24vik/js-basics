@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>Hold your Breathe !</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const ChangeText = function() {
+    document.querySelector('h1').innerHTML = "Suspense Overloaded"
+    }
+
+    const ChangeMe = setTimeout(ChangeText, 2000)
+
+    document.getElementById('stop').addEventListener('click', function(e) {
+        clearInterval(ChangeMe);
+    })
+</script>
+</html>
