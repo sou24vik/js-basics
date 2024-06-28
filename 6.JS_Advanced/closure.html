@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure & Lexical Scoping</title>
+</head>
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    function outer () {
+        let x = 'payel'
+        //console.log('Outer', y);
+
+        function inner() {
+            let y = 123
+
+            console.log('Inner', x);
+        }
+
+        function inner2() {
+            console.log('Inner2', x);
+        }
+        inner()
+        inner2()
+    }
+    outer();
+
+    function makeFunc() {
+        let name = 'name1'
+        function displayName() {
+            console.log(name);
+        }
+
+        return displayName;
+
+    }
+    const myFunc = makeFunc();
+    myFunc();
+
+</script>
+
+<script>
+
+    // document.getElementById("orange").onclick = function() {
+    //     document.body.style.backgroundColor = `orange`
+    // }
+
+    // document.getElementById("green").onclick = function() {
+    //     document.body.style.backgroundColor = `green`
+    // }
+
+    function clickHandler(color) {
+        
+         return function () {
+        document.body.style.backgroundColor = `${color}`
+        }
+    }
+
+    document.getElementById("orange").onclick = clickHandler("orange")
+    document.querySelector('#green').onclick = clickHandler("green")
+
+</script>
+</html>
