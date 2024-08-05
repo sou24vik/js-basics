@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onkeyup</title>
+</head>
+<body>
+    <label for="demo">Type Something</label>
+    <input type="text" id="demo" onkeyup="keyupfn()" onkeydown="keydownfn()">
+    <script>
+        function keydownfn() {
+            document.getElementById('demo').style.backgroundColor = 'red';
+        }
+        function keyupfn() {
+            document.getElementById('demo').style.backgroundColor = 'green';
+        }
+    </script>
+</body>
+</html>

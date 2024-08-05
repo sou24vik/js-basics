@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>timeStamp</title>
+</head>
+
+<body>
+    <p>
+        Focus this iframe and press any key to get the current timestamp for the
+        keypress event.
+    </p>
+    <p>TIMESTAMP:</p>
+    <span id="time">-</span>
+</body>
+<script>
+    function getTime() {
+        const time = document.getElementById("time");
+        //console.log(time.firstChild);
+        //console.log(time.firstChild.nodeValue);
+        time.firstChild.nodeValue = event.timeStamp;
+    }
+    document.body.addEventListener("keypress", getTime);
+</script>
+
+</html>

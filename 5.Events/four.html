@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type</title>
+</head>
+
+<body>
+    <p class="paragraph">Press any Key or click the mouse to get Event Type</p>
+    <p id="log"></p>
+</body>
+<script>
+    function getEventType() {
+        document.getElementById('log').innerText = `${event.type}\n${log.innerText}`;
+    }
+
+    document.addEventListener("keydown", getEventType, false)
+    document.addEventListener("keypress", getEventType, false)
+    document.addEventListener("keyup", getEventType, false)
+
+    document.addEventListener("mousedown", getEventType, false)
+    document.addEventListener("mouseup", getEventType, false)
+    document.addEventListener("click", getEventType, false)
+</script>
+
+</html>

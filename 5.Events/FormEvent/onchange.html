@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onchange</title>
+</head>
+<body>
+    <label for="batsman">Select a batsman from the list</label>
+    <select name="batsman" id="batsman" onchange="main()">
+        <option value="">Please Choose an option</option>
+        <option value="Virat">Virat Kohli</option>
+        <option value="Rohit">Rohit Sharma</option>
+        <option value="Pant">Rishab Pant</option>
+        <option value="SKY">Surya Kumar Yadav</option>
+    </select>
+    <p id="demo"></p>
+</body>
+<script>
+    function main(){
+        let x = document.getElementById('batsman').value;
+        document.getElementById('demo').innerHTML = `You Selected ${x}`
+    }
+</script>
+</html>
